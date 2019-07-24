@@ -1,13 +1,25 @@
 <html>
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <head>
+       
         <title>Welcome!</title>
     </head>
     <body>
-        <h1>Hello world!</h1>
+        <h1>Hello {{user.name}} </h1>
         <p>We can build a full webpage here</p>
         <form>
             <input type="text" name="nickname" value="Enter your nickname"/>
             <input type="submit" value="Submit"/>
         </form>
+        
+        <form method="post" action="/sendBreakfast">
+            <label for="nickname">What's your nickname?</label>
+            <input type='text' name='nickname'>
+            <label for="breakfast">What did you have for breakfast?</label>
+            <input type='text' name='breakfast'>
+            <input type='submit'>
+        </form>
+        
+        <a href="/secret"> Go to Secret page! </a>
     </body>
 </html>
